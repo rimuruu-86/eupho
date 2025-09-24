@@ -1,0 +1,182 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>Anime Reviews - Eupho</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <style>
+    
+    .collage {
+      position: relative;
+      width: 100%;
+      min-height: 1100px;
+      margin: 20px auto; 
+      overflow: visible;
+    }
+
+.collage a {
+  position: absolute;
+  display: block;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: transform 0.3s;
+}
+.collage a:hover {
+  transform: scale(1.1);
+  z-index: 10;
+}
+.collage a {
+  outline: none;
+  border: none;
+}
+.collage a:focus {
+  outline: none;
+  border: none;
+}
+.collage a:hover span {
+  opacity: 1;
+}
+
+.collage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.collage span {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0,0,0,0.6); /* dark overlay */
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+  padding: 6px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+  </style>
+</head>
+<body class="is-preload">
+
+  <!-- Wrapper -->
+  <div id="wrapper">
+
+    <!-- Main -->
+    <div id="main">
+      <div class="inner">
+
+        <!-- Header -->
+        <header id="header">
+          <a href="index.html" class="logo"><strong>Eupho</strong> by lime</a>
+        </header>
+
+        <!-- Freeform Collage Section -->
+        <section>
+			<header class="main">
+				<h1 data-translate="anime.title">Anime Reviews</h1>
+			</header>
+          <div class="collage">
+            <a href="bocchi.html" style="top: 20px; left: 30px; width: 300px; height: 160px;">
+              <img src="images/bocchi.jpg" alt="Bocchi the Rock">
+			  <span>Bocchi the Rock!</span>
+            </a>
+            <a href="bluebird.html" style="top: 200px; left: 30px; width: 300px; height: 380px;">
+              <img src="images/Liz.to.Aoi.Tori.jpg" alt="Liz to Aoi Tori">
+			        <span>Liz to Aoi Tori</span>
+            </a>
+            <a href="hibike.html" style="top: 20px; left: 350px; width: 280px; height: 210px;">
+              <img src="images/euphos3.png" alt="Hibike Euphonium">
+              <span>Hibike! Euphonium</span>
+            </a>
+            <a href="sao.html" style="top: 250px; left: 350px; width: 350px; height: 210px;">
+              <img src="images/swordart.jpg" alt="Sword Art Online">
+              <span>Sword Art Online</span>
+            </a>
+            <a href="haruhi.html" style="top: 20px; left: 650px; width: 340px; height: 210px;">
+              <img src="images/haruhi.jpg" alt="Haruhi Suzumiya">
+              <span>Suzumiya Haruhi no Yuutsu/Shoushitsu</span>
+            </a>
+            <a href="takopi.html" style="top: 480px; left: 350px; width: 350px; height: 350px;">
+              <img src="images/takopi.jpg" alt="Takopi's Original Sin">
+              <span>Takopii no Genzai</span>
+            </a>
+            <a href="shingeki.html" style="top: 250px; left: 720px; width: 270px; height: 350px;">
+              <img src="images/attacktitan.jpg" alt="Attack on Titan">
+              <span>Shingeki no Kyojin</span>
+            </a>
+            <a href="dandadan.html" style="top: 600px; left: 30px; width: 300px; height: 420px;">
+              <img src="images/weenie.jpg" alt="Dandadan">
+              <span>Dandadan</span>
+            </a>
+            <a href="mob.html" style="top: 850px; left: 350px; width: 350px; height: 250px;">
+              <img src="images/mobs1.png" alt="Mob Psycho 100">
+              <span>Mob Psycho 100</span>
+            </a>
+            <a href="rezero.html" style="top: 620px; left: 720px; width: 270px; height: 420px;">
+              <img src="images/rezerokv.jpg" alt="Re:Zero">
+              <span>Re:Zero</span>
+            </a>
+          </div>
+        </section>
+
+      </div>
+    </div>
+
+    <!-- Sidebar -->
+    <div id="sidebar">
+      <div class="inner">
+
+        <!-- Search -->
+        <section id="search" class="alt">
+          <form method="post" action="#">
+            <input type="text" name="query" id="query" placeholder="Search" />
+          </form>
+        </section>
+
+        <!-- Menu -->
+        <nav id="menu">
+          <header class="major">
+            <h2 data-translate="menu">Menu</h2>
+          </header>
+          <ul>
+            <li><a href="index.html" data-translate="common.homepage">Homepage</a></li>
+            <li><a href="anime.html" data-translate="common.anime">Anime Reviews</a></li>
+            <li><a href="generic.html" data-translate="common.history">History about Eupho</a></li>
+            <div style="margin: 10px 0; padding-left:10px;">
+              <select id="langSelect" onchange="setLanguage(this.value)">
+                <option value="en">English</option>
+                <option value="id">Indonesia</option>
+              </select>
+            </div>
+          </ul>
+        </nav>
+
+        <!-- Footer -->
+        <footer id="footer">
+          <p class="copyright" data-translate="common.footer">
+            &copy; Eupho. Design: <a href="https://html5up.net">HTML5 UP</a>.
+          </p>
+        </footer>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/browser.min.js"></script>
+  <script src="assets/js/breakpoints.min.js"></script>
+  <script src="assets/js/util.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/toggle.onclick.js"></script>
+  <script src="assets/js/translations.js"></script>
+
+  </script>
+</body>
+</html>
