@@ -17,52 +17,38 @@
 
   /* Review card as link */
   .review-card {
-    display: flex;
-    gap: 0.75rem;
-    align-items: flex-start;
-    padding: 0.75rem;
-    border: 1px solid rgba(4,134,255,0.12);
-    border-radius: 8px;
-    background: #fff;
-    color: inherit;
-    text-decoration: none;
-    transition: box-shadow .18s ease, transform .12s ease;
-  }
+  display: flex;
+  flex-direction: column;
+  width: 330px;       
+  min-height: 280px;  
+  padding: 1rem;      
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+  transition: transform 0.2s ease;
+}
   .review-card:focus,
   .review-card:hover {
     box-shadow: 0 8px 20px rgba(4,134,255,0.08);
-    transform: translateY(-3px);
     outline: none;
+    transform: scale(1.02);
   }
 
   /* Left thumbnail / poster */
   .review-thumb {
     position: relative;
     flex: 0 0 120px;
-    width: 120px;
-    min-width: 120px;
-    height: 68px;
+    width: 300px;
+    min-width: 300px;
+    height: 258px;
     overflow: hidden;
     border-radius: 6px;
   }
   .review-thumb img {
     width: 100%;
-    height: 100%;
+    height: auto;
+    border-radius: 6px;
     object-fit: cover;
     display: block;
-  }
-
-  /* "HIDDEN SPOILER" overlay (small tag) */
-  .review-spoiler {
-    position: absolute;
-    left: 6px;
-    top: 6px;
-    background: rgba(0,0,0,0.6);
-    color: #fff;
-    font-size: 0.65rem;
-    padding: 2px 6px;
-    border-radius: 3px;
-    pointer-events: none;
   }
 
   /* Review badge */
@@ -70,7 +56,7 @@
     position: absolute;
     right: 6px;
     bottom: 6px;
-    background: rgba(4,134,255,0.95);
+    background: rgba(0, 0, 0, 0.5);
     color: #fff;
     font-weight: 700;
     font-size: 0.75rem;
@@ -153,33 +139,21 @@
             <a class="review-card" href="bocchi.html" aria-label="Bocchi the Rock!">
               <div class="review-thumb" aria-hidden="true">
                 <img src="images/bocchi.jpg" alt="bocchi visuals">
-                <div class="review-spoiler">?</div>
                 <div class="review-badge">Bocchi the Rock!</div>
               </div>
           
               <div class="review-body">
                 <div class="review-title-row">
-                  <div class="reviewtitle">Bocchi the Rock!</div>
-          
-                  <div class="review-icons" aria-hidden="true">
-                    <!-- icon: video/cast -->
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                      <path d="M20 4H4c-1.103 0-2 .897-2 2v12c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2V6c0-1.103-.897-2-2-2zM8 10h3v4H8v-4zm7 0h-3v4h3v2h-3c-1.103 0-2-.897-2-2v-4c0-1.103.897-2 2-2h3v2z"></path>
-                    </svg>
-          
-                    <!-- icon: lock (example) -->
-                    <svg width="14" height="14" viewBox="0 0 448 512" fill="currentColor" aria-hidden="true">
-                      <path d="M400 192h-24V128C376 57.31 318.7 0 248 0S120 57.31 120 128v64H96c-26.51 0-48 21.49-48 48v176c0 26.51 21.49 48 48 48h304c26.51 0 48-21.49 48-48V240c0-26.51-21.5-48-48-48zM200 128c0-26.51 21.49-48 48-48s48 21.49 48 48v64H200v-64z"></path>
-                    </svg>
-                  </div>
+                  <div class="reviewtitle">Season 1</div>
                 </div>
-          
+            
                 <div class="review-desc" id="episode-description-1">
                   A year has passed since SAO was cleared. Summoned by Kikuoka of the Virtual Division at the Ministry of Internal Affairs and Communications, 
                   Kazuto learns of a series of bizarre murders linked to the popular VR game, Gun Gale Online (GGO), the only game in Japan played by pros.
                 </div>
               </div>
             </a>
+            
           </div>
         </section>
 
