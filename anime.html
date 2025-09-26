@@ -25,6 +25,7 @@
   border-radius: 10px;
   box-shadow: 0 4px 16px rgba(0,0,0,0.12);
   transition: transform 0.2s ease;
+  border: none !important;
 }
   .review-card:focus,
   .review-card:hover {
@@ -35,20 +36,16 @@
 
   /* Left thumbnail / poster */
   .review-thumb {
-    position: relative;
-    flex: 0 0 120px;
-    width: 300px;
-    min-width: 300px;
-    height: 258px;
-    overflow: hidden;
-    border-radius: 6px;
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  border-radius: 6px;
   }
   .review-thumb img {
-    width: 100%;
-    height: auto;
-    border-radius: 6px;
-    object-fit: cover;
-    display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   }
 
   /* Review badge */
@@ -87,21 +84,14 @@
     text-overflow: ellipsis;
   }
 
-  /* small icons row */
-  .review-icons {
-    display: flex;
-    gap: 0.4rem;
-    align-items: center;
-    color: #666;
-    font-size: 0.78rem;
-  }
-  .review-desc {
+  /* desc */
+    .review-desc {
     color: #444;
-    font-size: 0.88rem;
+    font-size: 0.8rem;
     line-height: 1.3;
     margin-top: 0.25rem;
     display: -webkit-box;
-    -webkit-line-clamp: 3; /* truncate to 3 lines */
+    -webkit-line-clamp: 4; /* truncate to 3 lines */
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -134,26 +124,48 @@
 
         <!-- anime reviews section -->
         <section>
-          <div class="episodes-grid" id="episodes-list-container">
+          <div class="review-grid" id="review-list-container">
             <!-- review card -->
             <a class="review-card" href="bocchi.html" aria-label="Bocchi the Rock!">
               <div class="review-thumb" aria-hidden="true">
                 <img src="images/bocchi.jpg" alt="bocchi visuals">
                 <div class="review-badge">Bocchi the Rock!</div>
               </div>
-          
               <div class="review-body">
                 <div class="review-title-row">
-                  <div class="reviewtitle">Season 1</div>
                 </div>
-            
-                <div class="review-desc" id="episode-description-1">
-                  A year has passed since SAO was cleared. Summoned by Kikuoka of the Virtual Division at the Ministry of Internal Affairs and Communications, 
-                  Kazuto learns of a series of bizarre murders linked to the popular VR game, Gun Gale Online (GGO), the only game in Japan played by pros.
+                <div class="review-desc" id="review-description-hibike">
+                  It’s been a while since I’ve watched this anime, around the year 2022, I think? 
+                  And here I am, revisiting what is, in my opinion, the best music-related anime ever aired in the last decade.
                 </div>
               </div>
             </a>
-            
+            <a class="review-card" href="hibike.html" aria-label="Hibike! Euphonium">
+              <div class="review-thumb" aria-hidden="true">
+                <img src="images/euphos3.png" alt="eupho">
+                <div class="review-badge">Hibike! Euphonium</div>
+              </div>
+              <div class="review-body">
+                <div class="review-title-row">
+                </div>
+                <div class="review-desc" id="review-description-hibike">
+                  Peak
+                </div>
+              </div>
+            </a>
+            <a class="review-card" href="sao.html" aria-label="Sword Art Online">
+              <div class="review-thumb" aria-hidden="true">
+                <img src="images/swordart.jpg" alt="sao visuals">
+                <div class="review-badge">Sword Art Online</div>
+              </div>
+              <div class="review-body">
+                <div class="review-title-row">
+                </div>
+                <div class="review-desc" id="review-description-sao">
+                  It's pretty good, I guess?
+                </div>
+              </div>
+            </a>
           </div>
         </section>
 
