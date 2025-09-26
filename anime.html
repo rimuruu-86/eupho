@@ -7,58 +7,128 @@
   <link rel="stylesheet" href="assets/css/main.css" />
   <style>
     
-    .collage {
-      position: relative;
-      width: 100%;
-      min-height: 1100px;
-      margin: 20px auto; 
-      overflow: visible;
-    }
+ /* Container grid */
+ .review-grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+    margin: 1rem 0;
+  }
 
-.collage a {
-  position: absolute;
-  display: block;
-  overflow: hidden;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-  transition: transform 0.3s;
-}
-.collage a:hover {
-  transform: scale(1.1);
-  z-index: 10;
-}
-.collage a {
-  outline: none;
-  border: none;
-}
-.collage a:focus {
-  outline: none;
-  border: none;
-}
-.collage a:hover span {
-  opacity: 1;
-}
+  /* Review card as link */
+  .review-card {
+    display: flex;
+    gap: 0.75rem;
+    align-items: flex-start;
+    padding: 0.75rem;
+    border: 1px solid rgba(4,134,255,0.12);
+    border-radius: 8px;
+    background: #fff;
+    color: inherit;
+    text-decoration: none;
+    transition: box-shadow .18s ease, transform .12s ease;
+  }
+  .review-card:focus,
+  .review-card:hover {
+    box-shadow: 0 8px 20px rgba(4,134,255,0.08);
+    transform: translateY(-3px);
+    outline: none;
+  }
 
-.collage img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
+  /* Left thumbnail / poster */
+  .review-thumb {
+    position: relative;
+    flex: 0 0 120px;
+    width: 120px;
+    min-width: 120px;
+    height: 68px;
+    overflow: hidden;
+    border-radius: 6px;
+  }
+  .review-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
 
-.collage span {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(0,0,0,0.6); /* dark overlay */
-  color: #fff;
-  font-size: 14px;
-  text-align: center;
-  padding: 6px;
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
-}
+  /* "HIDDEN SPOILER" overlay (small tag) */
+  .review-spoiler {
+    position: absolute;
+    left: 6px;
+    top: 6px;
+    background: rgba(0,0,0,0.6);
+    color: #fff;
+    font-size: 0.65rem;
+    padding: 2px 6px;
+    border-radius: 3px;
+    pointer-events: none;
+  }
+
+  /* Review badge */
+  .review-badge {
+    position: absolute;
+    right: 6px;
+    bottom: 6px;
+    background: rgba(4,134,255,0.95);
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.75rem;
+    padding: 3px 6px;
+    border-radius: 4px;
+  }
+
+  /* Right content */
+  .review-body {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    min-width: 0;
+  }
+  .review-title-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .review-title {
+    font-weight: 600;
+    font-size: 0.97rem;
+    color: #111;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  /* small icons row */
+  .review-icons {
+    display: flex;
+    gap: 0.4rem;
+    align-items: center;
+    color: #666;
+    font-size: 0.78rem;
+  }
+  .review-desc {
+    color: #444;
+    font-size: 0.88rem;
+    line-height: 1.3;
+    margin-top: 0.25rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* truncate to 3 lines */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  /* badge / aria-friendly focus */
+  .review-card:focus { box-shadow: 0 0 0 3px rgba(4,134,255,0.12); }
+
+  /* small responsive tweak */
+  @media (max-width:560px){
+    .review-thumb { flex: 0 0 110px; width:110px; height:62px; }
+    .review-title { font-size:0.95rem; }
+  }
 
   </style>
 </head>
@@ -76,51 +146,39 @@
           <a href="index.html" class="logo"><strong>Eupho</strong> by lime</a>
         </header>
 
-        <!-- Freeform Collage Section -->
+        <!-- anime reviews section -->
         <section>
-			<header class="main">
-				<h1 data-translate="anime.title">Anime Reviews</h1>
-			</header>
-          <div class="collage">
-            <a href="bocchi.html" style="top: 20px; left: 30px; width: 300px; height: 160px;">
-              <img src="images/bocchi.jpg" alt="Bocchi the Rock">
-			  <span>Bocchi the Rock!</span>
-            </a>
-            <a href="bluebird.html" style="top: 200px; left: 30px; width: 300px; height: 380px;">
-              <img src="images/Liz.to.Aoi.Tori.jpg" alt="Liz to Aoi Tori">
-			        <span>Liz to Aoi Tori</span>
-            </a>
-            <a href="hibike.html" style="top: 20px; left: 350px; width: 280px; height: 210px;">
-              <img src="images/euphos3.png" alt="Hibike Euphonium">
-              <span>Hibike! Euphonium</span>
-            </a>
-            <a href="sao.html" style="top: 250px; left: 350px; width: 350px; height: 210px;">
-              <img src="images/swordart.jpg" alt="Sword Art Online">
-              <span>Sword Art Online</span>
-            </a>
-            <a href="haruhi.html" style="top: 20px; left: 650px; width: 340px; height: 210px;">
-              <img src="images/haruhi.jpg" alt="Haruhi Suzumiya">
-              <span>Suzumiya Haruhi no Yuutsu/Shoushitsu</span>
-            </a>
-            <a href="takopi.html" style="top: 480px; left: 350px; width: 350px; height: 350px;">
-              <img src="images/takopi.jpg" alt="Takopi's Original Sin">
-              <span>Takopii no Genzai</span>
-            </a>
-            <a href="shingeki.html" style="top: 250px; left: 720px; width: 270px; height: 350px;">
-              <img src="images/attacktitan.jpg" alt="Attack on Titan">
-              <span>Shingeki no Kyojin</span>
-            </a>
-            <a href="dandadan.html" style="top: 600px; left: 30px; width: 300px; height: 420px;">
-              <img src="images/weenie.jpg" alt="Dandadan">
-              <span>Dandadan</span>
-            </a>
-            <a href="mob.html" style="top: 850px; left: 350px; width: 350px; height: 250px;">
-              <img src="images/mobs1.png" alt="Mob Psycho 100">
-              <span>Mob Psycho 100</span>
-            </a>
-            <a href="rezero.html" style="top: 620px; left: 720px; width: 270px; height: 420px;">
-              <img src="images/rezerokv.jpg" alt="Re:Zero">
-              <span>Re:Zero</span>
+          <div class="episodes-grid" id="episodes-list-container">
+            <!-- review card -->
+            <a class="review-card" href="bocchi.html" aria-label="Bocchi the Rock!">
+              <div class="review-thumb" aria-hidden="true">
+                <img src="images/bocchi.jpg" alt="bocchi visuals">
+                <div class="review-spoiler">?</div>
+                <div class="review-badge">Bocchi the Rock!</div>
+              </div>
+          
+              <div class="review-body">
+                <div class="review-title-row">
+                  <div class="reviewtitle">Bocchi the Rock!</div>
+          
+                  <div class="review-icons" aria-hidden="true">
+                    <!-- icon: video/cast -->
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                      <path d="M20 4H4c-1.103 0-2 .897-2 2v12c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2V6c0-1.103-.897-2-2-2zM8 10h3v4H8v-4zm7 0h-3v4h3v2h-3c-1.103 0-2-.897-2-2v-4c0-1.103.897-2 2-2h3v2z"></path>
+                    </svg>
+          
+                    <!-- icon: lock (example) -->
+                    <svg width="14" height="14" viewBox="0 0 448 512" fill="currentColor" aria-hidden="true">
+                      <path d="M400 192h-24V128C376 57.31 318.7 0 248 0S120 57.31 120 128v64H96c-26.51 0-48 21.49-48 48v176c0 26.51 21.49 48 48 48h304c26.51 0 48-21.49 48-48V240c0-26.51-21.5-48-48-48zM200 128c0-26.51 21.49-48 48-48s48 21.49 48 48v64H200v-64z"></path>
+                    </svg>
+                  </div>
+                </div>
+          
+                <div class="review-desc" id="episode-description-1">
+                  A year has passed since SAO was cleared. Summoned by Kikuoka of the Virtual Division at the Ministry of Internal Affairs and Communications, 
+                  Kazuto learns of a series of bizarre murders linked to the popular VR game, Gun Gale Online (GGO), the only game in Japan played by pros.
+                </div>
+              </div>
             </a>
           </div>
         </section>

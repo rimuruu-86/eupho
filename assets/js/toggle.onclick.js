@@ -85,3 +85,12 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+// support "Enter" / Space to activate card when focused (for keyboard users)
+  document.querySelectorAll('.review-card').forEach(card => {
+    card.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        card.click();
+      }
+    });
+  });
