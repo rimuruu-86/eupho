@@ -2333,3 +2333,37 @@ button,
 .season-content[aria-hidden="false"] {
   display: block;
 }
+
+/* tooltip */
+.glossary-tooltip {
+  position: relative;
+  cursor: help;
+  color: #b7b7b7;
+  text-decoration: none;
+}
+
+.glossary-tooltip-content {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  bottom: 125%; /* appears above the word */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+
+  background: rgba(0, 0, 0, 0.85);
+  color: #fff;
+  padding: 8px 10px;
+  border-radius: 5px;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  width: 260px;
+
+  transition: opacity 0.2s ease-in-out;
+  pointer-events: none;
+}
+
+.glossary-tooltip:hover .glossary-tooltip-content {
+  visibility: visible;
+  opacity: 1;
+}
