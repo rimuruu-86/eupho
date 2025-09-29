@@ -7,6 +7,10 @@ document.addEventListener('DOMContentLoaded', function() {
         { url: "saoprogressive.html", title: 'SAO Progressive Movies Review'},
         { url: 'bocchi.html', title: 'Bocchi the Rock Review'},
         { url: 'hibike.html', title: 'Hibike Euphonium Review'},
+        { url: 'dandadan.html', title: 'Dandadan Review'},
+        { url: 'liztoaoitori.html', title: 'Liz to Aoi Tori Review'},
+        { url: 'haruhi.html', title: 'Haruhi Suzumiya no Yuutsu/Shoushitsu Review'},
+        { url: 'shingeki.html', title: 'Shingeki no Kyojin Review'},
         { url: 'anime.html', title: 'Anime Reviews Page'},
     ];
 
@@ -24,29 +28,28 @@ document.addEventListener('DOMContentLoaded', function() {
         resultsContainer.innerHTML = '<p>Searching...</p>';
         
         const results = [];
+        const keywords = searchQuery.toLowerCase().split(/\s+/); // split into words
         
         for (const page of searchablePages) {
             try {
                 const response = await fetch(page.url);
                 const text = await response.text();
                 
-                // Create a temporary element to parse the HTML
                 const parser = new DOMParser();
                 const doc = parser.parseFromString(text, 'text/html');
-                
-                // Remove scripts and styles
                 doc.querySelectorAll('script, style').forEach(el => el.remove());
                 
-                // Get the main content
                 const content = doc.querySelector('#main')?.textContent || doc.body.textContent;
+                const lowerContent = content.toLowerCase();
                 
-                // Simple search - case insensitive
-                if (content.toLowerCase().includes(searchQuery.toLowerCase())) {
-                    // Find the relevant snippet
-                    const position = content.toLowerCase().indexOf(searchQuery.toLowerCase());
+                // Match if ANY keyword is found
+                const matches = keywords.filter(kw => lowerContent.includes(kw));
+                if (matches.length > 0) {
+                    const firstMatch = matches[0];
+                    const position = lowerContent.indexOf(firstMatch);
                     const snippet = content.substring(
                         Math.max(0, position - 100),
-                        Math.min(content.length, position + searchQuery.length + 100)
+                        Math.min(content.length, position + firstMatch.length + 100)
                     );
                     
                     results.push({
@@ -60,7 +63,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
         
-        // Display results
         if (results.length > 0) {
             resultsContainer.innerHTML = results.map(result => `
                 <div class="search-result">
@@ -72,10 +74,20 @@ document.addEventListener('DOMContentLoaded', function() {
         } else {
             resultsContainer.innerHTML = '<p>No results found.</p>';
         }
-    }
+    }    
 
     function highlightSearchTerm(text, searchTerm) {
-        const regex = new RegExp(`(${searchTerm})`, 'gi');
-        return text.replace(regex, '<span class="highlight">$1</span>');
+        const words = searchTerm.trim().split(/\s+/); // split into words
+        let highlighted = text;
+    
+        words.forEach(word => {
+            if (word.length > 0) {
+                const regex = new RegExp(`(${word})`, 'gi');
+                highlighted = highlighted.replace(regex, '<span class="highlight">$1</span>');
+            }
+        });
+    
+        return highlighted;
     }
+    
 });
