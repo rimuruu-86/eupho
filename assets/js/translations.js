@@ -54,6 +54,38 @@ const translations = {
             en: "Anime Reviews",
             id: "Ulasan Anime",
         },
+        bocchi: {
+          en: "A sleeper hit turned famous, Bocchi the Rock! surprised me by how a music anime can take the limit so far, combined with an all-star staffs that are just as passionate as the source material itself.",
+          id: "",
+        },
+        hibike: {
+          en: "One of my personal favourite from Kyoto Animation, such a stunning depiction of an ensemble band and their struggles, along with its blosomming bonds.",
+          id: "",
+        },
+        sao: {
+          en: "This anime is so easy to rant over, <em>jokes aside</em>, this anime is decent, albeit with its glaring problems.",
+          id: "",
+        },
+        haruhi: {
+          en: "A high-school girl who can alter universe, an esper, a time traveller, a data observer from another planet, and a normal guy who don't believe in such things. How could it possibly go wrong?",
+          id: "",
+        },
+        dandadan: {
+          en: "In nutshell: <em>an anime about a boy finding his balls stolen by a granny</em>. Get it?",
+          id: "",
+        },
+        mob: {
+          en: "A shounen anime that offers more than what the genre usually could.",
+          id: "Anime shounen yang menawarkan lebih dari apa yang biasanya ditawarkan dari genrenya.",
+        },
+        liz: {
+          en: "Naoko Yamada at her peak. And Kensuke Ushio's music, oh god.",
+          id: "Naoko Yamada + Kensuke Ushio. Wow, just wow.",
+        },
+        aot: {
+          en: "The anime that came like a storm, with it's insane storybuilding and foreshadowing that still blows my mind. Hajime Isayama, what did you cook for this, man?",
+          id: "Anime yang datang begitu saja dan menggemparkan dunia, dengan alur cerita dan foreshadowingnya yang diluar nalar. Hajime Isayama, coba spill resep masakannya untuk ini dong.",
+        },
     },
 
     // History page
