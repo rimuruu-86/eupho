@@ -48,19 +48,19 @@ const translations = {
         },
         bocchi: {
           en: "A sleeper hit turned famous, Bocchi the Rock! surprised me by how a music anime can take the limit so far, combined with an all-star staffs that are just as passionate as the source material itself.",
-          id: "",
+          id: "Sebuah <em>sleeper hit> yang menjadi terkenal, Bocchi the Rock! membuat saya terkejut dengan caranya mendorong batasan anime musik bisa lakukan, dikombinasikan dengan tim yang memiliki passion yang tinggi",
         },
         hibike: {
           en: "One of my personal favourite from Kyoto Animation, such a stunning depiction of an ensemble band and their struggles, along with its blosomming bonds.",
-          id: "",
+          id: "Salah satu anime favorit saya dari Kyoto Animation, menggambarkan perkembangan dari sebuah band musik dan masalah yang mereka hadapi.",
         },
         sao: {
           en: "This anime is so easy to rant over, <em>jokes aside</em>, this anime is decent, albeit with its glaring problems.",
-          id: "",
+          id: "Anime ini mudah sekali untuk dikritik, <em>for real though</em>, Sword Art Online itu bagus, cuma ada beberapa masalah yang mengganggu.",
         },
         haruhi: {
           en: "A high-school girl who can alter universe, an esper, a time traveller, a data observer from another planet, and a normal guy who don't believe in such things. How could it possibly go wrong?",
-          id: "",
+          id: "Anime ini bisa dikatakan dengan 2 kata: <em>terlalu gila</em>.",
         },
         dandadan: {
           en: "In nutshell: <em>an anime about a boy finding his balls stolen by a granny</em>. Get it?",
