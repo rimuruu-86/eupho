@@ -18,10 +18,6 @@ const translations = {
         en: "History about Eupho",
         id: "Sejarah tentang Eupho"
       },
-      aboutMe: {
-        en: "About me",
-        id: "Tentang saya"
-      },
       footer: {
         en: "&copy; Eupho. Design: <a href='https://html5up.net'>HTML5 UP</a>.",
         id: "&copy; Eupho. Desain: <a href='https://html5up.net'>HTML5 UP</a>."
@@ -34,10 +30,6 @@ const translations = {
         en: "Eupho",
         id: "Eupho"
       },
-      subtitle: {
-        en: "An amateur blog about everything",
-        id: "Blog amatir yang memuat semuanya"
-      },
       about: {
         en: "This website includes my reviews on many animes that I've watched for the last 3 years. Simple and straightforward, right?",
         id: "Website ini berisi ulasan saya tentang banyak anime yang sudah saya tonton selama 3 tahun terakhir. Sederhana, kan?"
@@ -48,7 +40,7 @@ const translations = {
       }
     },
 
-    //Anime review page
+    // Anime review page
     anime: {
         title: {
             en: "Anime Reviews",
@@ -105,7 +97,11 @@ const translations = {
         P3: {
             en: "About the domain stuff, I think I will do it at the time I present the work later, after that however, it depends. This site is supposed to be small-scale anyways so hopefully with that in mind, I can find something that didn't cost my entire budget.",
             id: "Soal domain, saya rasa saya akan melakukannya nanti saat presentasi nanti, tapi setelah itu, tergantung juga. Situs ini memang dirancang untuk skala kecil, jadi semoga dengan mempertimbangkan hal itu, saya bisa menemukan domain yang tidak berbayar."
-        }
+        },
+        aboutme: {
+            en: "About me",
+            id: "Tentang saya",
+        },
     },
   
     // SAO page specific translations
