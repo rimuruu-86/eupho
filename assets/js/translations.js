@@ -48,7 +48,7 @@ const translations = {
         },
         bocchi: {
           en: "A sleeper hit turned famous, Bocchi the Rock! surprised me by how a music anime can take the limit so far, combined with an all-star staffs that are just as passionate as the source material itself.",
-          id: "Sebuah <em>sleeper hit> yang menjadi terkenal, Bocchi the Rock! membuat saya terkejut dengan caranya mendorong batasan anime musik bisa lakukan, dikombinasikan dengan tim yang memiliki passion yang tinggi",
+          id: "Sebuah <em>sleeper hit</em> yang menjadi terkenal, Bocchi the Rock! membuat saya terkejut dengan caranya mendorong batasan anime musik bisa lakukan, dikombinasikan dengan tim yang memiliki passion yang tinggi",
         },
         hibike: {
           en: "One of my personal favourite from Kyoto Animation, such a stunning depiction of an ensemble band and their struggles, along with its blosomming bonds.",
